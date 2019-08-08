@@ -60,9 +60,18 @@ abstract class Form {
   }
 
   public void buildForm() {
+    System.out.println("Input Elements:");
+    buildInputElements().forEach(s -> System.out.println(s));
+    System.out.println("");
+    System.out.println("Aditional Input Elements:");
+    buildAditionalInputElements().forEach(s -> System.out.println(s));
   }
 
   List<String> buildInputElements() {
     return this.inputElements;
+  }
+
+  List<String> buildAditionalInputElements() {
+    return this.aditionalInputElements;
   }
 }
